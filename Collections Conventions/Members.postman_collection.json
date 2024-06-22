@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "ef4b03f6-9b3a-41bd-9d82-b78a527c653c",
+		"name": "Members",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8356863"
+	},
+	"item": [
+		{
+			"name": "Novos Membros",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Member Name 1\",\r\n    \"document\": \"12312314354324234\",\r\n    \"phone\": \"+1234567890\",\r\n    \"email\": \"member4341@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/member",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nova Lista de Membros",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"Member Name 1\",\r\n        \"document\": \"12312314354324234\",\r\n        \"phone\": \"+1234567890\",\r\n        \"email\": \"member@example.com\"\r\n    },\r\n    {\r\n        \"name\": \"Member Name 2\",\r\n        \"document\": \"123123143\",\r\n        \"phone\": \"+1234567890\",\r\n        \"email\": \"member422341@example.com\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/member/new-list-members",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"member",
+						"new-list-members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Membros",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Member Name 1323\",\r\n    \"document\": \"12312314354324234\",\r\n    \"phone\": \"+1234567890\",\r\n    \"email\": \"member4341@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/member",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Usuários",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/member/list?pageIndex=0&pageSize=10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"member",
+						"list"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

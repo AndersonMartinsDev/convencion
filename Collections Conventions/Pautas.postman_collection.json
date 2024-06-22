@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "d56c561c-49b0-4803-9ad3-603ec9f53810",
+		"name": "Pautas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8356863"
+	},
+	"item": [
+		{
+			"name": "Nova Pauta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Schedule Name 2\",\r\n    \"theme\": \"Schedule Theme 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/schedule",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pautas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/schedule/list?pageIndex=0&pageSize=10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedule",
+						"list"
+					],
+					"query": [
+						{
+							"key": "pageIndex",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resultado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/schedule/result?scheduledId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedule",
+						"result"
+					],
+					"query": [
+						{
+							"key": "scheduledId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inicia a votação na pauta",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/schedule/start-schedule?timeInMinutes=10&scheduleId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedule",
+						"start-schedule"
+					],
+					"query": [
+						{
+							"key": "timeInMinutes",
+							"value": "10"
+						},
+						{
+							"key": "scheduleId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
