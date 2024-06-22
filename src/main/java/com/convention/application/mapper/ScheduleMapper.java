@@ -58,6 +58,9 @@ public class ScheduleMapper {
 
 
     public static List<ScheduleResumeDto> toListScheduleDto(List<Schedule> schedules) {
+        if(Objects.isNull(schedules)){
+            return null;
+        }
         return schedules
                 .stream()
                 .map(map -> ScheduleResumeDto.builder()
@@ -67,6 +70,9 @@ public class ScheduleMapper {
                 ).toList();
     }
     public static Collection<ScheduleResumeDto> toListScheduleDto(Collection<Schedule> schedules) {
+        if(Objects.isNull(schedules)){
+            return null;
+        }
         return schedules
                 .stream()
                 .map(map -> ScheduleResumeDto.builder()

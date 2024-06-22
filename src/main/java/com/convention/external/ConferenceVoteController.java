@@ -21,8 +21,7 @@ public class ConferenceVoteController {
 
     @PostMapping
     public ConferenceVoteResumeDto getAMemberVote(@RequestBody ConferenceVoteDto conferenceVoteDto){
-        //TODO: PERMITIR O USUARIO VOTAR COM O DOCUMENTO
-        return toConferenceVoteResumeDto(service.insert(toConferenceVote(conferenceVoteDto)));
+        return toConferenceVoteResumeDto(service.insert(conferenceVoteDto));
     }
 
     @DeleteMapping(value = "/{index}")

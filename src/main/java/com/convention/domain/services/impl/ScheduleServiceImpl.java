@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -33,7 +32,6 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
     public Boolean verifyIfCanApplyVote(Long scheduleId) {
 
-        //TODO: COLOCAR A CHAMDA DA API
         var schedule = repository.getById(scheduleId);
         var execution = schedule.getDateTimeExecution();
         var timeInMinutes = schedule.getTimeInMinutes();

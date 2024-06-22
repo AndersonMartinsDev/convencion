@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @Builder
 public class ConferenceVoteDto {
-    private Long memberId;
+    private String document;
     private Long scheduleId;
     private ConferenceVoteEnum vote;
 }

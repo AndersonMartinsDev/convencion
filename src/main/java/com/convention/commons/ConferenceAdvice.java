@@ -7,6 +7,7 @@ import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.UnexpectedTypeException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.InvalidDataAccessApiUsageException;
+import org.springframework.dao.InvalidDataAccessResourceUsageException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -25,6 +26,7 @@ import static com.convention.domain.exceptions.ConvenctionTextExecptions.NOT_FOU
 @ControllerAdvice
 public class ConferenceAdvice {
     @ExceptionHandler({
+            InvalidDataAccessResourceUsageException.class,
             HttpMessageNotWritableException.class,
             InvalidDataAccessApiUsageException.class,
             UnsupportedOperationException.class,

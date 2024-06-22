@@ -16,16 +16,11 @@ public class ConferenceVote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @OneToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(unique = true,nullable = false)
-    private Schedule schedule;
-    @OneToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(nullable = false)
-    private Member member;
+    private Long scheduleId;
+    private Long memberId;
     @NotNull
     @Enumerated(EnumType.STRING)
     @Column(name="vote")
     private ConferenceVoteEnum vote;
 
-    //TODO: RESOLVER PROBLEMA DE VOTAÇão dois usuários diferentes não votam na mesma pauta
 }
