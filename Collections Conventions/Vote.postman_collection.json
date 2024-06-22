@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "58c33f00-409e-4fa1-b90e-0f0c9bab22ba",
+		"name": "Vote",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8356863"
+	},
+	"item": [
+		{
+			"name": "MakeAVote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"document\": \"123123143\",\r\n    \"scheduleId\": 1,\r\n    \"vote\":\"SIM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/vote",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAVote",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/vote/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vote",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
